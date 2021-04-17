@@ -708,7 +708,7 @@ class ColumnIO:
         column_ids = np.array(column_ids)
 
         if column_ids is not None:
-            if max(column_ids) >= len(self.data) - 1:
+            if max(column_ids) > len(self.data) - 1:
                 raise ValueError('Can not load column ID %i. File contains '
                                  'only %i columns' % (max(column_ids),
                                                       len(self.data)))
